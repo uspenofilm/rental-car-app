@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 56px;
+}
+
+.searchBtn {
+  box-sizing: border-box;
+  width: 156px;
+  height: 44px;
+  background-color: #3470ff;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  color: #ffff;
+  padding: 12px 0;
+  text-align: center;
+}
