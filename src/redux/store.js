@@ -1,24 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-import {
-  FLUSH,
-  PAUSE,
-  PERSIST,
-  persistStore,
-  persistReducer,
-  PURGE,
-  REGISTER,
-  REHYDRATE,
-} from "redux-persist";
+import { carsReducer } from "../redux/Cars/slice.js";
 
 export const store = configureStore({
-  reducer: {},
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
+  reducer: {
+    cars: carsReducer,
+  },
 });
-
-export const persistor = persistStore(store);
